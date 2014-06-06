@@ -10,9 +10,11 @@ namespace Alfredas
 {
     public partial class Form1 : Form
     {
+        int List1CheckedItemIndex;
         public Form1()
         {
             InitializeComponent();
+            List1CheckedItemIndex = -1;
             FillListBoxWorkers();
         }
         public void FillListBoxWorkers()
@@ -92,12 +94,100 @@ namespace Alfredas
         }
         private void listView1_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            // tikrinti ar paspaudimas ant naujo ar seno jau checked (clear ir check kita arba tik clear)
+            if (List1CheckedItemIndex != e.Index)
+            {
+                if (List1CheckedItemIndex != -1)
+                {
+                    listView1.Items[List1CheckedItemIndex].Checked = false;
+                }
+                List1CheckedItemIndex = e.Index;
+            }
         }
-    }
-    class Darbuotojas
-    {
-        string vardas;
-        double atlyginimas;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ListViewItem item = new ListViewItem("Įveskite nauja varda čia!");
+            item.Checked = false;
+            item.SubItems.Add("0.00");
+            listView1.Items.Add(item);
+            for (int i = 0; i < listView1.Columns.Count; i++)
+            {
+                listView1.Columns[i].Width = -2;
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ListViewItem item = new ListViewItem("Įveskite nauja pavadinima čia!");
+            item.Checked = false;
+            item.SubItems.AddRange(new string[] { "0.0", "0.0", "0.0", "0.0" });
+            listView2.Items.Add(item);
+            for (int i = 0; i < listView2.Columns.Count; i++)
+            {
+                listView2.Columns[i].Width = -2;
+            }
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ListViewItem item = new ListViewItem("Įveskite nauja pavadinima čia!");
+            item.Checked = false;
+            item.SubItems.AddRange(new string[] { "0.0", "0.0" });
+            listView3.Items.Add(item);
+            for (int i = 0; i < listView3.Columns.Count; i++)
+            {
+                listView3.Columns[i].Width = -2;
+            }
+        }
+        private void listView1_KeyPress(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 46)
+            {
+                if (listView1.SelectedItems.Count != 0)
+                {
+                    foreach (ListViewItem itemSelected in listView1.SelectedItems)
+                    {
+                        listView1.Items.Remove(itemSelected);
+                    }
+                }
+            }
+        }
+        private void listView2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 46)
+            {
+                if (listView2.SelectedItems.Count != 0)
+                {
+                    foreach (ListViewItem itemSelected in listView2.SelectedItems)
+                    {
+                        listView2.Items.Remove(itemSelected);
+                    }
+                }
+            }
+        }
+        private void listView3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 46)
+            {
+                if (listView3.SelectedItems.Count != 0)
+                {
+                    foreach (ListViewItem itemSelected in listView3.SelectedItems)
+                    {
+                        listView3.Items.Remove(itemSelected);
+                    }
+                }
+            }
+        }
+        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 1)
+            {
+                ListViewHitTestInfo info = listView1.HitTest(e.X, e.Y);
+                ListViewItem.ListViewSubItem subitem = new ListViewItem.ListViewSubItem();
+                if (listView1.SelectedItems[0] == info.Item)
+                {
+                    subitem = info.SubItem;
+                }
+                string text = subitem.Text;
+
+            }
+        }
     }
 }
