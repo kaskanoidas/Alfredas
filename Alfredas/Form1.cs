@@ -11,182 +11,73 @@ namespace Alfredas
     public partial class Form1 : Form
     {
         int List1CheckedItemIndex;
+        Boolean List1HasChanged;
         public Form1()
         {
+            List1HasChanged = false;
+            List1CheckedItemIndex = -2;
             InitializeComponent();
-            List1CheckedItemIndex = -1;
             FillListBoxWorkers();
+            List1CheckedItemIndex = -1;
         }
         public void FillListBoxWorkers()
         {
-            listView1.Columns.Add("Vardas", -2, HorizontalAlignment.Left);
-            listView1.Columns.Add("Bazinis atlyginimas", -2, HorizontalAlignment.Left);
+            dataGridView1.Rows.Add(false,"Marko", 1000.00);
+            dataGridView1.Rows.Add(false, "Employee 2", 2000.00);
+            dataGridView1.Rows.Add(false, "Employee 3", 3000.00);
 
-            listView2.Columns.Add("Pavadinimas", -2, HorizontalAlignment.Left);
-            listView2.Columns.Add("Bazinė reikšmė", -2, HorizontalAlignment.Left);
-            listView2.Columns.Add("Faktinė reikšmė", -2, HorizontalAlignment.Left);
-            listView2.Columns.Add("Tikslinė reikšmė", -2, HorizontalAlignment.Left);
-            listView2.Columns.Add("Maks. kintama dalis", -2, HorizontalAlignment.Left);
+            dataGridView2.Rows.Add(false, "PROFIT", 100000.0, 130000.0, 121000.0, 1200.0);
+            dataGridView2.Rows.Add(false, "COSTS", 500000.0, 450000.0, 480000.0, 800.0);
+            dataGridView2.Rows.Add(false, "Indicator 3", 2.0, 2.4, 4.0, 2.0);
+            dataGridView2.Rows.Add(false, "Indicator 4", 3.0, 3.6, 6.0, 3.0);
 
-            listView3.Columns.Add("Pavadinimas", -2, HorizontalAlignment.Left);
-            listView3.Columns.Add("Maksimalus įvertinimas", -2, HorizontalAlignment.Left);
-            listView3.Columns.Add("Įvertinimas", -2, HorizontalAlignment.Left);
-
-            ListViewItem item = new ListViewItem("Marko");
-            item.Checked = false;
-            item.SubItems.Add("1000.00");
-            listView1.Items.Add(item);
-
-            item = new ListViewItem("Employee 2");
-            item.Checked = false;
-            item.SubItems.Add("2000.00");
-            listView1.Items.Add(item);
-
-            item = new ListViewItem("Employee 3");
-            item.Checked = false;
-            item.SubItems.Add("3000.00");
-            listView1.Items.Add(item);
-
-            item = new ListViewItem("PROFIT");
-            item.Checked = false;
-            item.SubItems.AddRange(new string[] {"100000.0", "130000.0","121000.0", "1200.0"});
-            listView2.Items.Add(item);
-
-            item = new ListViewItem("COSTS");
-            item.Checked = false;
-            item.SubItems.AddRange(new string[] { "500000.0", "450000.0", "480000.0", "800.0" });
-            listView2.Items.Add(item);
-
-            item = new ListViewItem("Indicator 3");
-            item.Checked = false;
-            item.SubItems.AddRange(new string[] { "2.0", "2.4", "4.0", "2.0" });
-            listView2.Items.Add(item);
-
-            item = new ListViewItem("Indicator 4");
-            item.Checked = false;
-            item.SubItems.AddRange(new string[] { "3.0", "3.6", "6.0", "3.0" });
-            listView2.Items.Add(item);
-
-            item = new ListViewItem("RELATIONSHIP WITH...");
-            item.Checked = false;
-            item.SubItems.AddRange(new string[] { "11.0", "9.0"});
-            listView3.Items.Add(item);
-
-            item = new ListViewItem("CUTTING ON THE RET...");
-            item.Checked = false;
-            item.SubItems.AddRange(new string[] { "9.0", "5.0" });
-            listView3.Items.Add(item);
-
-            item = new ListViewItem("IMPROVING PROFESS...");
-            item.Checked = false;
-            item.SubItems.AddRange(new string[] { "7.0", "6.0" });
-            listView3.Items.Add(item);
-
-            item = new ListViewItem("TASK 4");
-            item.Checked = false;
-            item.SubItems.AddRange(new string[] { "8.0", "7.0" });
-            listView3.Items.Add(item);
-
-            item = new ListViewItem("TASK 5");
-            item.Checked = false;
-            item.SubItems.AddRange(new string[] { "9.0", "8.0" });
-            listView3.Items.Add(item);
+            dataGridView3.Rows.Add(false, "RELATIONSHIP WITH...", 11.0, 9.0);
+            dataGridView3.Rows.Add(false, "CUTTING ON THE RET...", 9.0, 5.0);
+            dataGridView3.Rows.Add(false, "IMPROVING PROFESS...", 7.0, 6.0);
+            dataGridView3.Rows.Add(false, "TASK 4", 8.0, 7.0);
+            dataGridView3.Rows.Add(false, "TASK 5", 9.0, 8.0);
         }
-        private void listView1_ItemCheck(object sender, ItemCheckEventArgs e)
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (List1CheckedItemIndex != e.Index)
+            if (List1CheckedItemIndex != -2)
             {
-                if (List1CheckedItemIndex != -1)
+                if (e.ColumnIndex == 0)
                 {
-                    listView1.Items[List1CheckedItemIndex].Checked = false;
-                }
-                List1CheckedItemIndex = e.Index;
-            }
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem("Įveskite nauja varda čia!");
-            item.Checked = false;
-            item.SubItems.Add("0.00");
-            listView1.Items.Add(item);
-            for (int i = 0; i < listView1.Columns.Count; i++)
-            {
-                listView1.Columns[i].Width = -2;
-            }
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem("Įveskite nauja pavadinima čia!");
-            item.Checked = false;
-            item.SubItems.AddRange(new string[] { "0.0", "0.0", "0.0", "0.0" });
-            listView2.Items.Add(item);
-            for (int i = 0; i < listView2.Columns.Count; i++)
-            {
-                listView2.Columns[i].Width = -2;
-            }
-        }
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ListViewItem item = new ListViewItem("Įveskite nauja pavadinima čia!");
-            item.Checked = false;
-            item.SubItems.AddRange(new string[] { "0.0", "0.0" });
-            listView3.Items.Add(item);
-            for (int i = 0; i < listView3.Columns.Count; i++)
-            {
-                listView3.Columns[i].Width = -2;
-            }
-        }
-        private void listView1_KeyPress(object sender, KeyEventArgs e)
-        {
-            if (e.KeyValue == 46)
-            {
-                if (listView1.SelectedItems.Count != 0)
-                {
-                    foreach (ListViewItem itemSelected in listView1.SelectedItems)
+                    if (List1CheckedItemIndex != e.RowIndex)
                     {
-                        listView1.Items.Remove(itemSelected);
+                        if (List1CheckedItemIndex != -1)
+                        {
+                            List1HasChanged = true;
+                            dataGridView1.Rows[List1CheckedItemIndex].Cells[0].Value = false;
+                        }
+                        List1CheckedItemIndex = e.RowIndex;
                     }
-                }
-            }
-        }
-        private void listView2_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyValue == 46)
-            {
-                if (listView2.SelectedItems.Count != 0)
-                {
-                    foreach (ListViewItem itemSelected in listView2.SelectedItems)
+                    else
                     {
-                        listView2.Items.Remove(itemSelected);
+                        if (List1HasChanged == true)
+                        {
+                            List1HasChanged = false;
+                        }
+                        else
+                        {
+                            List1CheckedItemIndex = -1;
+                        }
                     }
-                }
+                } 
             }
         }
-        private void listView3_KeyDown(object sender, KeyEventArgs e)
+        private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.KeyValue == 46)
+            if (e.ColumnIndex == 0 && e.RowIndex != -1)
             {
-                if (listView3.SelectedItems.Count != 0)
-                {
-                    foreach (ListViewItem itemSelected in listView3.SelectedItems)
-                    {
-                        listView3.Items.Remove(itemSelected);
-                    }
-                }
+                dataGridView1.EndEdit();
             }
         }
-        private void listView1_MouseClick(object sender, MouseEventArgs e)
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (listView1.SelectedItems.Count == 1)
+            if (dataGridView1.SelectedCells.Count == 1 && dataGridView1.SelectedCells[0].ColumnIndex == 0 && dataGridView1.SelectedCells[0].RowIndex != -1 && e.KeyValue == 32)
             {
-                ListViewHitTestInfo info = listView1.HitTest(e.X, e.Y);
-                ListViewItem.ListViewSubItem subitem = new ListViewItem.ListViewSubItem();
-                if (listView1.SelectedItems[0] == info.Item)
-                {
-                    subitem = info.SubItem;
-                }
-                string text = subitem.Text;
-
+                dataGridView1.EndEdit(); // removes functionality from spacebar
             }
         }
     }
