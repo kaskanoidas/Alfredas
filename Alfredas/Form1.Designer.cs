@@ -53,6 +53,8 @@
             this.PavadinimasUzd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Maksimalus_įvertinimas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Įvertinimas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rodikliai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Užduotys = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -79,7 +81,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(934, 361);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1105, 508);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -100,7 +102,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(367, 355);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(436, 502);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // tableLayoutPanel4
@@ -115,7 +117,7 @@
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(359, 34);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(428, 34);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // label1
@@ -126,7 +128,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 34);
+            this.label1.Size = new System.Drawing.Size(322, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "Darbuotojai";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,11 +141,13 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pasirinkti_darbuotoja,
             this.Vardas,
-            this.Bazinis_atlyginimas});
+            this.Bazinis_atlyginimas,
+            this.Rodikliai,
+            this.Užduotys});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(4, 45);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(359, 306);
+            this.dataGridView1.Size = new System.Drawing.Size(428, 453);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseUp);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
@@ -177,14 +181,14 @@
             this.tableLayoutPanel3.Controls.Add(this.dataGridView3, 0, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(376, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(445, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(555, 355);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(657, 502);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // tableLayoutPanel7
@@ -194,12 +198,12 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel7.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 181);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(4, 254);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(547, 34);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(649, 34);
             this.tableLayoutPanel7.TabIndex = 3;
             // 
             // label4
@@ -210,7 +214,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(441, 34);
+            this.label4.Size = new System.Drawing.Size(543, 34);
             this.label4.TabIndex = 0;
             this.label4.Text = "Užduotys";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,7 +231,7 @@
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(547, 34);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(649, 34);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // label2
@@ -238,7 +242,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(441, 34);
+            this.label2.Size = new System.Drawing.Size(543, 34);
             this.label2.TabIndex = 0;
             this.label2.Text = "Rodikliai";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -258,7 +262,7 @@
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(4, 45);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(547, 129);
+            this.dataGridView2.Size = new System.Drawing.Size(649, 202);
             this.dataGridView2.TabIndex = 4;
             // 
             // Rodiklio_pasirinkimas
@@ -302,9 +306,9 @@
             this.Maksimalus_įvertinimas,
             this.Įvertinimas});
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(4, 222);
+            this.dataGridView3.Location = new System.Drawing.Point(4, 295);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(547, 129);
+            this.dataGridView3.Size = new System.Drawing.Size(649, 203);
             this.dataGridView3.TabIndex = 5;
             // 
             // Užduoties_pasirinkimas
@@ -327,12 +331,22 @@
             this.Įvertinimas.HeaderText = "Įvertinimas";
             this.Įvertinimas.Name = "Įvertinimas";
             // 
+            // Rodikliai
+            // 
+            this.Rodikliai.HeaderText = "Rodikliai";
+            this.Rodikliai.Name = "Rodikliai";
+            // 
+            // Užduotys
+            // 
+            this.Užduotys.HeaderText = "Užduotys";
+            this.Užduotys.Name = "Užduotys";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(934, 361);
+            this.ClientSize = new System.Drawing.Size(1105, 508);
             this.Controls.Add(this.tableLayoutPanel1);
             this.MinimumSize = new System.Drawing.Size(950, 400);
             this.Name = "Form1";
@@ -380,6 +394,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PavadinimasUzd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Maksimalus_įvertinimas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Įvertinimas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rodikliai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Užduotys;
 
 
 
