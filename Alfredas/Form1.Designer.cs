@@ -36,6 +36,8 @@
             this.Pasirinkti_darbuotoja = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Vardas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bazinis_atlyginimas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rodikliai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Užduotys = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,13 +50,17 @@
             this.Faktinė_reikšmė = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tikslinė_reikšmė = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Maksimali_kintama_dalis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Užduoties_pasirinkimas = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.PavadinimasUzd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Maksimalus_įvertinimas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Įvertinimas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rodikliai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Užduotys = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Viso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -63,7 +69,9 @@
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -143,7 +151,8 @@
             this.Vardas,
             this.Bazinis_atlyginimas,
             this.Rodikliai,
-            this.Užduotys});
+            this.Užduotys,
+            this.Viso});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(4, 45);
             this.dataGridView1.Name = "dataGridView1";
@@ -168,6 +177,16 @@
             this.Bazinis_atlyginimas.HeaderText = "Bazinis atlyginimas";
             this.Bazinis_atlyginimas.Name = "Bazinis_atlyginimas";
             // 
+            // Rodikliai
+            // 
+            this.Rodikliai.HeaderText = "Rodikliai";
+            this.Rodikliai.Name = "Rodikliai";
+            // 
+            // Užduotys
+            // 
+            this.Užduotys.HeaderText = "Užduotys";
+            this.Užduotys.Name = "Užduotys";
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.White;
@@ -178,7 +197,7 @@
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel7, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.dataGridView2, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.dataGridView3, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 0, 3);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(445, 3);
@@ -295,6 +314,22 @@
             this.Maksimali_kintama_dalis.HeaderText = "Maksimali kintama dalis";
             this.Maksimali_kintama_dalis.Name = "Maksimali_kintama_dalis";
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.dataGridView3, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel8, 0, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(4, 295);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(649, 203);
+            this.tableLayoutPanel6.TabIndex = 0;
+            // 
             // dataGridView3
             // 
             this.dataGridView3.AllowUserToResizeRows = false;
@@ -306,10 +341,10 @@
             this.Maksimalus_įvertinimas,
             this.Įvertinimas});
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(4, 295);
+            this.dataGridView3.Location = new System.Drawing.Point(3, 3);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(649, 203);
-            this.dataGridView3.TabIndex = 5;
+            this.dataGridView3.Size = new System.Drawing.Size(643, 157);
+            this.dataGridView3.TabIndex = 6;
             // 
             // Užduoties_pasirinkimas
             // 
@@ -331,15 +366,62 @@
             this.Įvertinimas.HeaderText = "Įvertinimas";
             this.Įvertinimas.Name = "Įvertinimas";
             // 
-            // Rodikliai
+            // tableLayoutPanel8
             // 
-            this.Rodikliai.HeaderText = "Rodikliai";
-            this.Rodikliai.Name = "Rodikliai";
+            this.tableLayoutPanel8.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel8.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.button1, 2, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 166);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(643, 34);
+            this.tableLayoutPanel8.TabIndex = 7;
             // 
-            // Užduotys
+            // label3
             // 
-            this.Užduotys.HeaderText = "Užduotys";
-            this.Užduotys.Name = "Užduotys";
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label3.Location = new System.Drawing.Point(4, 1);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(294, 32);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Maksimali kintama dalis pagal užduotis:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.textBox1.Location = new System.Drawing.Point(305, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(231, 26);
+            this.textBox1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.button1.Location = new System.Drawing.Point(543, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 26);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Skaičiuoti";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Viso
+            // 
+            this.Viso.HeaderText = "Viso";
+            this.Viso.Name = "Viso";
             // 
             // Form1
             // 
@@ -362,7 +444,10 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -371,31 +456,37 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Pasirinkti_darbuotoja;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Vardas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bazinis_atlyginimas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rodikliai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Užduotys;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Pasirinkti_darbuotoja;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vardas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bazinis_atlyginimas;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Rodiklio_pasirinkimas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pavadinimas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bazinė_reikšmė;
         private System.Windows.Forms.DataGridViewTextBoxColumn Faktinė_reikšmė;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tikslinė_reikšmė;
         private System.Windows.Forms.DataGridViewTextBoxColumn Maksimali_kintama_dalis;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Užduoties_pasirinkimas;
         private System.Windows.Forms.DataGridViewTextBoxColumn PavadinimasUzd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Maksimalus_įvertinimas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Įvertinimas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rodikliai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Užduotys;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Viso;
 
 
 
