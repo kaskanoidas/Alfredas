@@ -38,6 +38,7 @@
             this.Bazinis_atlyginimas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rodikliai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Užduotys = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Viso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,15 +58,17 @@
             this.Maksimalus_įvertinimas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Įvertinimas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.Viso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archyvasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.apieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagalbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keistiKalbąToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lietuviškaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.русскийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -94,7 +97,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 484F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1105, 484);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -192,6 +195,11 @@
             // 
             this.Užduotys.HeaderText = "Užduotys";
             this.Užduotys.Name = "Užduotys";
+            // 
+            // Viso
+            // 
+            this.Viso.HeaderText = "Viso";
+            this.Viso.Name = "Viso";
             // 
             // tableLayoutPanel3
             // 
@@ -292,7 +300,7 @@
             // 
             // Rodiklio_pasirinkimas
             // 
-            this.Rodiklio_pasirinkimas.HeaderText = "Rodiklio pasirinkimas";
+            this.Rodiklio_pasirinkimas.HeaderText = "Pasirinkti rodiklį";
             this.Rodiklio_pasirinkimas.Name = "Rodiklio_pasirinkimas";
             // 
             // Pavadinimas
@@ -332,7 +340,7 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(649, 191);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
@@ -349,12 +357,12 @@
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(3, 3);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(643, 145);
+            this.dataGridView3.Size = new System.Drawing.Size(643, 125);
             this.dataGridView3.TabIndex = 6;
             // 
             // Užduoties_pasirinkimas
             // 
-            this.Užduoties_pasirinkimas.HeaderText = "Užduoties pasirinkimas";
+            this.Užduoties_pasirinkimas.HeaderText = "Pasirinkti užduotį";
             this.Užduoties_pasirinkimas.Name = "Užduoties_pasirinkimas";
             // 
             // PavadinimasUzd
@@ -376,58 +384,54 @@
             // 
             this.tableLayoutPanel8.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel8.ColumnCount = 3;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 400F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
-            this.tableLayoutPanel8.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
             this.tableLayoutPanel8.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.button1, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.richTextBox1, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 154);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 134);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(643, 34);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(643, 54);
             this.tableLayoutPanel8.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.Location = new System.Drawing.Point(4, 1);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(294, 32);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Maksimali kintama dalis pagal užduotis:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.textBox1.Location = new System.Drawing.Point(305, 4);
+            this.textBox1.Location = new System.Drawing.Point(405, 4);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 26);
+            this.textBox1.Size = new System.Drawing.Size(125, 46);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.button1.Location = new System.Drawing.Point(543, 4);
+            this.button1.Location = new System.Drawing.Point(537, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 26);
+            this.button1.Size = new System.Drawing.Size(102, 46);
             this.button1.TabIndex = 2;
             this.button1.Text = "Skaičiuoti";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Viso
+            // richTextBox1
             // 
-            this.Viso.HeaderText = "Viso";
-            this.Viso.Name = "Viso";
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.richTextBox1.Location = new System.Drawing.Point(4, 4);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox1.Size = new System.Drawing.Size(394, 46);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "Maksimali kintama dalis pagal užduotis:";
             // 
             // menuStrip1
             // 
@@ -447,24 +451,52 @@
             this.archyvasToolStripMenuItem.Name = "archyvasToolStripMenuItem";
             this.archyvasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.archyvasToolStripMenuItem.Text = "Archyvas";
+            this.archyvasToolStripMenuItem.Click += new System.EventHandler(this.archyvasToolStripMenuItem_Click);
             // 
             // apieToolStripMenuItem
             // 
             this.apieToolStripMenuItem.Name = "apieToolStripMenuItem";
             this.apieToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.apieToolStripMenuItem.Text = "Apie";
+            this.apieToolStripMenuItem.Click += new System.EventHandler(this.apieToolStripMenuItem_Click);
             // 
             // pagalbaToolStripMenuItem
             // 
             this.pagalbaToolStripMenuItem.Name = "pagalbaToolStripMenuItem";
             this.pagalbaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.pagalbaToolStripMenuItem.Text = "Pagalba";
+            this.pagalbaToolStripMenuItem.Click += new System.EventHandler(this.pagalbaToolStripMenuItem_Click);
             // 
             // keistiKalbąToolStripMenuItem
             // 
+            this.keistiKalbąToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lietuviškaiToolStripMenuItem,
+            this.englishToolStripMenuItem,
+            this.русскийToolStripMenuItem});
             this.keistiKalbąToolStripMenuItem.Name = "keistiKalbąToolStripMenuItem";
-            this.keistiKalbąToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
-            this.keistiKalbąToolStripMenuItem.Text = "Keisti kalbą";
+            this.keistiKalbąToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.keistiKalbąToolStripMenuItem.Text = "Pasirinkti kalbą";
+            // 
+            // lietuviškaiToolStripMenuItem
+            // 
+            this.lietuviškaiToolStripMenuItem.Name = "lietuviškaiToolStripMenuItem";
+            this.lietuviškaiToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.lietuviškaiToolStripMenuItem.Text = "Lietuviškai";
+            this.lietuviškaiToolStripMenuItem.Click += new System.EventHandler(this.lietuviškaiToolStripMenuItem_Click);
+            // 
+            // englishToolStripMenuItem
+            // 
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.englishToolStripMenuItem.Text = "English";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
+            // 
+            // русскийToolStripMenuItem
+            // 
+            this.русскийToolStripMenuItem.Name = "русскийToolStripMenuItem";
+            this.русскийToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.русскийToolStripMenuItem.Text = "Pусский";
+            this.русскийToolStripMenuItem.Click += new System.EventHandler(this.русскийToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -531,7 +563,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Maksimalus_įvertinimas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Įvertinimas;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Viso;
@@ -540,6 +571,10 @@
         private System.Windows.Forms.ToolStripMenuItem apieToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagalbaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem keistiKalbąToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lietuviškaiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem русскийToolStripMenuItem;
+        private System.Windows.Forms.RichTextBox richTextBox1;
 
 
 
