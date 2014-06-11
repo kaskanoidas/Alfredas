@@ -59,5 +59,41 @@ namespace Alfredas.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There are five concepts related to each other in the life of any human being - THE GOAL ITSELF, GOAL-ORIENTED ACTIVITY, MOTIVATION, OUTCOME AND REWARD.
+        ///
+        ///If a person has set a goal for himself/herself and is well motivated while performing a goal-oriented activity, he/she will achieve results and will be awarded for this. Inner motivation is the main driving force which helps achieve the desired goal.
+        ///
+        ///It is absolutely necessary that the goals of a team or a company also become the personal goals of its  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AboutEN {
+            get {
+                return ResourceManager.GetString("AboutEN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VEIKLA,  TIKSLAS,  MOTYVACIJA,  REZULTATAS,  ATLYGINIMAS - tai penkios sąvokos, kurios paliečia kiekvieną žmogų. Kiekvienas, kuris vykdo veiklą, turi tikslą, vidinę motyvaciją, pasiekia rezultatus ir už tai jam būna atlyginta. Vidinė motyvacija - pagrindinis tikslo siekimo variklis.
+        ///
+        ///Tam, kad įmonės ar komandos tikslai taptų kiekvieno jos nario tikslais, būtina, kad kiekvienas dalyvautų šių tikslų formavime, nustatyme. Tuomet, įgyvendinant užsibrėžtus tikslus, atsiranda vidinė motyvacija, kuri padeda pasi [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AboutLT {
+            get {
+                return ResourceManager.GetString("AboutLT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ДЕЯТЕЛЬНОСТЬ, ЦЕЛЬ, МОТИВАЦИЯ, РЕЗУЛЬТАТ, ВОЗНАГРАЖДЕНИЕ – это пять понятий, которые касаются каждого человека. Каждый, кто осуществляет деятельность, имеет цель, внутреннюю мотивацию, достигает результатов и получает за это вознаграждение. Внутренняя мотивация – основной двигатель достижения цели.
+        ///
+        ///
+        ///Для того, чтобы цель команды стала целью каждого ее члена, необходимо, чтобы каждый принял участие в формировании, определении этих целей. Тогда при реализации поставленных целей возникает внутренняя мотивац [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string AboutRU {
+            get {
+                return ResourceManager.GetString("AboutRU", resourceCulture);
+            }
+        }
     }
 }

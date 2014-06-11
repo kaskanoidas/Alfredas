@@ -339,7 +339,7 @@ namespace Alfredas
         {
 
         }
-        private void apieToolStripMenuItem_Click(object sender, EventArgs e)
+        private void apieToolStripMenuItem_Click(object sender, EventArgs e)// PVZ kitom skiltim
         {
             using (Form form = new Form())
             {
@@ -354,15 +354,15 @@ namespace Alfredas
                 about.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
                 if (apieToolStripMenuItem.Text == "Apie")
                 {
-                    about.Text = "";
+                    about.Text = Alfredas.Properties.Resources.AboutLT;
                 }
                 else if (apieToolStripMenuItem.Text == "About")
                 {
-                    about.Text = "";
+                    about.Text = Alfredas.Properties.Resources.AboutEN;
                 }
                 else if (apieToolStripMenuItem.Text == "Описание")
                 {
-                    about.Text = "";
+                    about.Text = Alfredas.Properties.Resources.AboutRU;
                 }
                 form.Controls.Add(about);
                 form.ShowDialog();
