@@ -337,7 +337,13 @@ namespace Alfredas
         }
         private void pagalbaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            using (Form form = new Form())
+            {
+                form.Text = pagalbaToolStripMenuItem.Text;
+                form.ClientSize = new System.Drawing.Size(1000, 500);
+                form.MinimumSize = new System.Drawing.Size(1000, 500);
+                form.ShowDialog();
+            } 
         }
         private void apieToolStripMenuItem_Click(object sender, EventArgs e)// PVZ kitom skiltim
         {
@@ -370,7 +376,13 @@ namespace Alfredas
         }
         private void archyvasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            using (Form form = new Form())
+            {
+                form.Text = archyvasToolStripMenuItem.Text;
+                form.ClientSize = new System.Drawing.Size(1000, 500);
+                form.MinimumSize = new System.Drawing.Size(1000, 500);
+                form.ShowDialog();
+            } 
         }
     }
 }
